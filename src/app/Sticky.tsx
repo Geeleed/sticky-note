@@ -61,7 +61,7 @@ export default function Sticky({ objectData }: { objectData: PropsSticky }) {
         className=" w-12 absolute -top-2 left-1/2 -translate-x-1/2 z-30 cursor-pointer"
       />
       <p
-        className=" whitespace-pre-wrap"
+        className=" whitespace-pre-wrap break-words"
         style={{
           color: fontColor,
           fontSize: `${fontSize}rem`,
