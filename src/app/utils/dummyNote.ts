@@ -1,0 +1,16 @@
+export default {
+  new: true,
+  pin: false,
+  fontStyle: "CuteThin",
+  fontSize: 3,
+  fontColor: "#000000",
+  align: "center",
+  tag: [],
+  cardColor: "#ffffaa",
+  checked: false,
+  createAt: 1,
+  editAt: 1,
+  content: "",
+  id: "1",
+  md5: "1",
+};
