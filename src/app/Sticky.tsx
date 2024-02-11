@@ -58,7 +58,7 @@ export default function Sticky({ objectData }: { objectData: PropsSticky }) {
         height={10}
         width={10}
         alt=""
-        className=" w-12 absolute -top-2 left-1/2 -translate-x-1/2 z-10 cursor-pointer"
+        className=" w-12 absolute -top-2 left-1/2 -translate-x-1/2 z-30 cursor-pointer"
       />
       <p
         className=" whitespace-pre-wrap"
