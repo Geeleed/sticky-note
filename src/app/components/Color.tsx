@@ -27,7 +27,7 @@ export default function Color({ setSelf, initColor }: Props) {
       new Set([...colors, ...notes.map((item) => item.cardColor).sort()])
     );
     setColors(init);
-  }, []);
+  }, [notes, colors]);
   return (
     <div className=" absolute top-0 left-0 w-full h-full bg-[#ffffdd] flex flex-col items-center justify-start p-10">
       <h1 className=" text-[2rem] font-bold">เลือกสีกระดาษ</h1>

@@ -3,8 +3,6 @@
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React from "react";
-import Pass from "./components/Pass";
-import Accept from "./components/Accept";
 import Accept2 from "./components/Accept2";
 import { useAppDispatch, useAppSelector } from "@/lib/hooks";
 import { setFilterGlobal } from "@/lib/slices/filterSlice";

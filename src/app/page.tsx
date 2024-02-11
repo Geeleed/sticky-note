@@ -7,7 +7,7 @@ import { readStorage } from "@/lib/slices/noteSlice";
 
 type Props = {};
 
-export default function page({}: Props) {
+export default function Page({}: Props) {
   let notes = useAppSelector((state: RootState) => state.note_.notes);
   const dispatch = useAppDispatch();
   useEffect(() => {

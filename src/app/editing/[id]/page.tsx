@@ -5,7 +5,7 @@ import { useAppSelector } from "@/lib/hooks";
 import { RootState } from "@/lib/store";
 import React from "react";
 
-export default function page({ params }: { params: { id: string } }) {
+export default function Page({ params }: { params: { id: string } }) {
   const notes = useAppSelector((state: RootState) => state.note_.notes);
   const note: PropsSticky = notes.filter((n) => n.id === params.id)[0];
   return (
