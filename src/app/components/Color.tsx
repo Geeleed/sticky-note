@@ -2,7 +2,6 @@ import { useAppDispatch, useAppSelector } from "@/lib/hooks";
 import { setCardColor } from "@/lib/slices/cardColorSlice";
 import { RootState } from "@/lib/store";
 import React, { useEffect, useRef, useState } from "react";
-import styled from "styled-components";
 import Close from "./Close";
 
 type Props = {
@@ -36,7 +35,6 @@ export default function Color({ setSelf, initColor }: Props) {
       <section className=" grid grid-cols-3 gap-2 w-full h-80 overflow-y-auto p-3">
         {colors.map((item: any, index: number) => (
           <div
-            // color={item}
             style={{ backgroundColor: item }}
             key={index}
             className={
