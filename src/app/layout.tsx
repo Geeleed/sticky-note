@@ -20,6 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="/svg/pin.svg" />
+        <meta name="theme-color" content="#ffffaa" />
       </head>
       <body className={inter.className}>
         <StoreProvider>{children}</StoreProvider>
