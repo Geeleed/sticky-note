@@ -6,6 +6,7 @@ import React from "react";
 import Accept2 from "./components/Accept2";
 import { useAppDispatch, useAppSelector } from "@/lib/hooks";
 import { setFilterGlobal } from "@/lib/slices/filterSlice";
+import { setTempID } from "@/lib/slices/tempIDSlice";
 
 export interface PropsSticky {
   new: boolean;
@@ -53,7 +54,10 @@ export default function Sticky({ objectData }: { objectData: PropsSticky }) {
       className=" max-w-[450px] relative min-h-80 pt-14 px-5 pb-8 text-[1.2rem] top-0 left-0 w-full h-full shadow-[7px_10px_#00000055] border-[3px] border-black"
     >
       <Image
-        onClick={() => router.push("/menu/" + id)}
+        onClick={() => {
+          dispatch(setTempID(id));
+          router.push("/menu");
+        }}
         src={"/svg/pin.svg"}
         height={10}
         width={10}

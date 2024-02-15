@@ -4,8 +4,9 @@ import { checkedNote, deleteNote } from "@/lib/slices/noteSlice";
 import { useRouter } from "next/navigation";
 import React from "react";
 
-export default function Page({ params }: { params: { id: string } }) {
+export default function Page() {
   const notes = useAppSelector((state) => state.note_.notes);
+  const tempID = useAppSelector((state) => state.tempID_.tempID);
   const router = useRouter();
   const btnCSS =
     " border-4 shadow-[5px_5px_#00000088] w-full h-fit p-2 px-5 text-[2rem] border-black hover:scale-105 cursor-pointer flex flex-row-reverse justify-between items-center";
@@ -36,7 +37,7 @@ export default function Page({ params }: { params: { id: string } }) {
         className={btnCSS + " bg-[#c6ffaa]"}
         onClick={() => {
           if (notes.length > 1) {
-            dispatch(deleteNote(params.id));
+            dispatch(deleteNote(tempID));
             router.push("/");
           } else {
             alert("ไม่อนุญาตให้ลบหมด");
@@ -62,7 +63,7 @@ export default function Page({ params }: { params: { id: string } }) {
       <button
         className={btnCSS + " bg-[#aaffc8]"}
         onClick={() => {
-          router.push("/editing/" + params.id);
+          router.push("/editing");
         }}
       >
         แก้ไขโน็ต
@@ -103,7 +104,7 @@ export default function Page({ params }: { params: { id: string } }) {
       </button>
       <button
         onClick={() => {
-          dispatch(checkedNote({ id: params.id, isChecked: true }));
+          dispatch(checkedNote({ id: tempID, isChecked: true }));
           router.push("/");
         }}
         className={btnCSS + " bg-[#ddaaff]"}

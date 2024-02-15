@@ -8,6 +8,7 @@ import fontColorReducers from "./slices/fontColorSlice";
 import tagReducers from "./slices/tagSlice";
 import alignReducers from "./slices/alignSlice";
 import filterReducers from "./slices/filterSlice";
+import tempIDReducers from "./slices/tempIDSlice";
 
 export const makeStore = () => {
   return configureStore({
@@ -20,6 +21,7 @@ export const makeStore = () => {
       tag_: tagReducers,
       align_: alignReducers,
       filter_: filterReducers,
+      tempID_: tempIDReducers,
     },
   });
 };
